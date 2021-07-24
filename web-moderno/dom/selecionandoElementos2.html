@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <script>              
+        document.querySelector('#primeiro').classList.add('destaque')
+
+        const selecionar = seletor =>
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+
+        const deselecionar = seletor =>
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
+
+        selecionar('div')
+
+        deselecionar('*')
+        selecionar('.terceiro.ultimo') //seleciona o elemento que tem essas duas classes
+
+        deselecionar('*')
+        selecionar(':not(#primeiro') //selecionar todos menos o id primeiro
+
+        deselecionar('*')
+        selecionar(':nth-child(1)') //seleciona todos os primeiros filhos
+
+        deselecionar('*')
+        selecionar('div:nth-of-type(1)') //seleciona o primeiro tipo que nesse caso foi determinado como div
+
+        deselecionar('*')
+        selecionar('[wb-attrib]') // selecionando o atributo correspondente        
+
+    </script>
+</body>
+</html>

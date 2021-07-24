@@ -1,0 +1,1 @@
+//obs.: em uma declaração de "ous" (||), o JS apresenta o primeiro resultado true

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <p>Início</p>
+    </div>
+    <div>
+        <ul>
+            <li>Pedro</li>
+            <li>Ana</li>
+            <li>Bia</li>
+        </ul>
+    </div>
+    <div>
+        <p>Fim</p>
+    </div>
+    <script>
+        const lista = document.querySelector('div ul')
+
+        const primeiro = lista.firstChild
+        console.log(primeiro.netxtSibling) //irmão
+
+        const ultimo = lista.lastChild
+        console.log(ultimo.previousSibling) // elemento anterior
+
+        console.log(lista.children)
+        console.log(firstElementoChild) //pega só o elemento
+        console.log(lista.lastElementChild)
+        console.log(lista.parentNode.previousElementSibling) //pega o elemento irmão anterior do pai
+        console.log(lista.parentNode.nextElementSibling) //pega o elemento irmão próximo referente ao elemento pai
+
+        document.querySelectorAll('div ul li') // melhor forma de usar, ao invés de ficar navegando
+
+        
+    </script>
+</body>
+
+</html>

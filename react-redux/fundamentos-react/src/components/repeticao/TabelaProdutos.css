@@ -1,0 +1,10 @@
+.TabelaProdutos th {
+    background-color: blue;
+}
+.TabelaProdutos .PAR {
+    background-color: lightgray;
+}
+
+.TabelaProdutos .IMPAR {
+    background-color: darkgray;
+}

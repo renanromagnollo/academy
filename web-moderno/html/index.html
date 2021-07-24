@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+    <nav>
+        <a href teste_link="exercicios/texto1" >Texto </a>
+        <a href teste_link="exercicios/listas.html" >Listas</a>
+        <a href teste_link="exercicios/listaalinhada.html" >Lista Aninhada</a>
+        <a href teste_link="exercicios/tabela.html" >Lista Aninhada</a>
+        <a href teste_link="exercicios/formulario/form.html" >Formulario</a>
+        <a href teste_link="exercicios/imagens.html" >Imagens</a>
+        <a href teste_link="exercicios/video.html" >Vídeo</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        <br>
+        Curso de Web Moderno
+    </footer>
+    <script>
+        document.querySelectorAll('[teste_link]') // retorna o interior da tag (os linksd)
+            .forEach(link => { // percorrendo o interior(no caso, link)
+                
+                // seleciona a área do conteúdo na página
+                const conteudo = document.getElementById('conteudo') 
+
+                // click no link
+                link.onclick = function(e) { // clink no link passando uma função
+                    
+                    e.preventDefault() // desabilitando o comportamento padrão no Html
+                    
+                    // Fazendo requisição Ajax com Promise para pegar conteúdo do link
+                    fetch(link.getAttribute('teste_link')) // fazendo equisição no link passado
+                        .then(resposta => resposta.text()) // obtendo a resposta e transformando em texto
+                        .then(html => conteudo.innerHTML = html) // pegando o retorno da execução acima e inserido o o que foi pegado no conteudo
+            }
+        })
+    </script>
+</body>
+</html>

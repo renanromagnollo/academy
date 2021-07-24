@@ -1,0 +1,35 @@
+<h1>Formulário</h1>
+
+<form meth="POST">
+    <input type="hidden" name="id" value="3">
+    <input type="text" name="nome">
+    <input type="password" name="senha">
+    
+    <textarea name="bio" id="" cols="30" rows="10"></textarea>
+
+    <div>
+        <input type="radio" name="tipo" value="Admin"> Admin
+        <input type="radio" name="tipo" value="user"> User
+    </div>
+
+    <div>
+        <input type="checkbox" name="ativo ">
+    </div>
+
+    <select name="estado" id="">
+        <option value="">Selecionado</option>
+        <option value="mg">MG</option>
+        <option value="sp">SP</option>
+    </select>
+
+    <select name="interesses" multiple size="7">
+        <option value="js">JS</option>
+        <option value="py">Python</option>
+        <option value="c">C</option>
+    </select>
+    
+    <button formaction=http://localhost:3030/usuarios>Incluir</button>
+    <button formaction=http://localhost:3030/usuarios/3>Incluir</button>
+    
+
+</form> 

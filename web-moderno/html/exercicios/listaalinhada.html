@@ -1,0 +1,27 @@
+<!-- Lista Aninhada -->
+<h2>Lista Aninhada</h2>
+<ul class="tree">
+    <li>
+        <span pasta>Beckend</span>
+        <ul>
+            <li>
+                <span pasta>app</span>
+                <ul>
+                    <li>produtos</li>
+                    <li>usuarios</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('[pasta]').forEach(p => {
+        p.onclick = eventoDoClick => {
+            const ul = p.nextElementSibling // aqui ele está pegando o próximo elemento, que são as ul
+            const d = ul.style.display // d recebe a display css da ul
+            ul.style.display = d === 'none' ? 'block' : 'none' // mudando o estado do display na hora do click       
+        }
+    })
+</script>

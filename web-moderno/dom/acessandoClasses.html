@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Classes</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        Classes
+    </div>
+    <script>
+        const classes = document.querySelector('div').classList
+        classes.add('destaque')
+        classes.remove('destaque')
+        classes.toggle('destaque') //alterna: se existe, ele remove, se não ele inseri.
+        console.log(classes.contains('destaque'))//verificando se contem classe
+        console.log(classes.length)//verificando quantidade
+        classes.toggle('destaque')//alternando se tiver remove, se não, add
+        
+
+    </script>
+</body>
+
+</html>

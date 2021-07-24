@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritório' data-urgencia="5">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+        const lista = document.querySelector('div ul[destino="escritório"]')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.id) //acessa o atributo id
+        console.log('destino', lista.destino)//não funciona pq o atributo é personalizado. tem q usar o getAttribute
+        console.log('getAttribute', lista.getAttribute('destino'))//... teria que usar dessa maneira
+        console.log('hasAttribute', lista.hasAttribute('destino'))//verificar se existe o atributo
+        lista.setAttribute('destino', 'empresa')//alterando atributo
+        lista.setAttribute('status', 'aberto')//inserindo novo atributo status com conteúdo aberto
+        lista.removeAttribute('destino')
+
+        //cuidado
+        const label = document.querySelector('label')
+        console.log(label.for) // não é possível devido a for ser uma palavra reservada da linguagem
+        console.log(label.htmlFor) // assim é possível
+        console.log(label.getAttribute('htmlFor')) //... assim tb é possível
+    </script>
+</body>
+
+</html>
