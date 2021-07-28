@@ -5,6 +5,15 @@ const saudacao = require('./saudacaoMid')
 
 app.use(saudacao('Renan'))
 
+app.get('/clientes/relatorio', (req, res) => {
+    res.send(`Cliente relatório: completo ${req.query.completo} ano = ${req.query.ano}`)
+})
+
+app.get('/client/:id', (req, res) => {
+    res.send(`Cliente ${req.params.id} selecionado!`)
+})
+
+
 app.use((req, res) => {
     // res.send('Se não declarar a url, essa requisição será executada em qq URL')
     // res.send('<h1>Aceita tb retornar um HTML</h1>')
