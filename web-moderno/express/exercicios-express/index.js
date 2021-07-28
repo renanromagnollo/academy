@@ -1,5 +1,18 @@
 const express = require('express')
 const app = express()
+const bodyParser = require('body-parser')
+
+const usuarioApi = request('./api/usuarios')
+
+
+app.use(bodyParser.text())
+app.use(bodyParser.json())
+app.use(bodyParser.urlenconded({extends: true}))
+
+app.get('/usuario/', usuarioApi.obter)
+app.post('/usuario/', usuarioApi.salvar)
+
+app.use((req, res) => req.body)
 
 const saudacao = require('./saudacaoMid')
 
