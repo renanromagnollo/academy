@@ -1,0 +1,17 @@
+{
+  "name": "exercicios-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon",
+    "production": "pm2 start index.js --name exercicio-backend"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pm2": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
