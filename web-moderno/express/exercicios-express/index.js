@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 
 const usuarioApi = request('./api/usuarios')
 
+require('./api/produto')(app, 'com param!')
+
 
 app.use(bodyParser.text())
 app.use(bodyParser.json())
