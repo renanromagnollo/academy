@@ -5,8 +5,9 @@ import React from 'react'
 
 import Logo from '../components/templates/Logo'
 import Nav from '../components/templates/Nav'
-import Home from '../components/templates/Home'
+// import Home from '../components/templates/Home'
 import Footer from '../components/templates/Footer'
+import Home from '../components/home/Home'
 
 export default props => 
     <div className="app">
