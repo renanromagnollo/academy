@@ -1,0 +1,58 @@
+@import './Global.module.scss';
+
+.area {
+    position: relative;
+    width: $area-porta-largura;
+    height: $area-porta-altura;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: flex-end;
+    
+    .frame {
+        // position: absolute;
+        width: 90%;
+        height: 300px;
+        border-top: brown solid 5px;
+        border-right: brown solid 5px;
+        border-left: brown solid 5px;
+        
+        .porta {
+            position: relative;
+            // display: flex;
+            // flex-direction: column;
+            // position: relative;
+            height: 100%;
+            align-items: center;
+            background-color: chocolate;
+            padding: 15px;
+        
+            .numero {
+                // position: absolute;
+                font-size: 3rem;
+            }
+        
+            .macaneta {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+        
+                margin-top: 30%;
+        
+                border-radius: 10px;
+                background-color: brown;
+            }
+        }
+    }
+    
+    .chao {
+        width: 100%;
+        height: 10px;
+
+        background-color: #fff;
+    }
+}
+
+
+
