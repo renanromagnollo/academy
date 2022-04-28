@@ -2,8 +2,11 @@
 
 .area {
     position: relative;
+    
     width: $area-porta-largura;
     height: $area-porta-altura;
+
+    margin: 10px;
 
     display: flex;
     flex-direction: column;
