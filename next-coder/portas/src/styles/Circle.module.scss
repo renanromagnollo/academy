@@ -1,0 +1,16 @@
+.area {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.circle {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: 5px solid yellow;
+    border-radius: 50%;
+    background-color: blue;
+}
+
