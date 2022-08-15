@@ -34,20 +34,17 @@ export function InstaFeed() {
     return (
         <section className={styles.container}>
             {feedList.map(item => (
-                <>
-                    <a key={item.id} href={item.permalink} target='_blank' className={styles.item}>
-                        {item.media_type === 'IMAGE' || item.media_type === 'CAROUSEL_ALBUM'
-                            ? <img src={item.media_url} />
-                            : (
-                                <video controls>
-                                    <source src={item.media_url}/>
-                                </video>
-                            )
-                        }
-                    </a>
-                    {/* <span>{item.caption}</span> */}
-                </>
-                
+                <a key={item.id} href={item.permalink} target='_blank' className={styles.item}>
+                    {item.media_type === 'IMAGE' || item.media_type === 'CAROUSEL_ALBUM'
+                        ? <img src={item.media_url} />
+                        : (
+                            <video controls>
+                                <source src={item.media_url}/>
+                            </video>
+                        )
+                    }
+                    <span>{item.caption}</span>
+                </a>
             ))}
         </section>
     )

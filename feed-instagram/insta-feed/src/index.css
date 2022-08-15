@@ -7,3 +7,8 @@
 body {
   background: #13171f;
 }
+
+span, a {
+  color: aliceblue;
+  text-decoration: none;
+}
