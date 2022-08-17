@@ -1,3 +1,6 @@
+import { empabalhar } from "../functions/arrays"
+import QuestaoModel from "./questao"
+
 export default class RespostaModel {
     #valor: string
     #certa: boolean
@@ -27,6 +30,8 @@ export default class RespostaModel {
     get revelada() {
         return this.#revelada
     }
+
+    
 
     paraObjeto() {
         return {
